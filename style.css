@@ -17,6 +17,7 @@ img{
 h1{
     text-align: center;
     margin-top: 100px;
+    text-shadow: 1px 2px 4px tomato;
 }
 
 a{
@@ -26,6 +27,7 @@ a{
 
 header{
     display: flex;
+        /* indica que o layout vai ser constuído em Flexbox */
     flex-wrap: wrap;
         /*Quando a tela for pequena os elementos colidirão */  
     justify-content: space-between;
@@ -60,3 +62,23 @@ header{
     flex: 1 1 200px;
     margin: 10px;
 }
+
+/* CSS Grid 1 */
+
+.grid1{
+    display: grid;
+        /* indica que o layout vai ser constuído em Grid */
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 780px;
+    margin: 0 auto;
+    grid-gap:20px;
+}
+
+.grid1 > div:nth-child(n + 4){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+ 
